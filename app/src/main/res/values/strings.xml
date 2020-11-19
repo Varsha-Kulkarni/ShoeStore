@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+
+    <string name="email">Email Id</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="newUser">Not an admin yet? Sign Up here.</string>
+    <string name="signup">SIGN UP</string>
+    <string name="email_error_string">Email field cannot be empty</string>
+    <string name="password_error_string">Password field cannot be empty</string>
+
+    <string name="welcome">WELCOME</string>
+    <string name="welcome_text1">Welcome to Shoe Store</string>
+    <string name="welcome_text2">Manage the shoe-list of all the Shoes available</string>
+    <string name="next">NEXT</string>
+
+    <string name="instructions">INSTRUCTIONS</string>
+    <string name="instructions_text1">Click on \'+\' to add the information about a pair of shoes in the store.\nIt opens up a new screen where you enter detailed information like:\nName\nCompany\nSize\nDescription\nClick Cancel/Save \n\n Click on three dots on the toolbar to Logout</string>
+<!--    <string name="instructions_text2">to add the information about a pair of shoes in the store.</string>-->
+<!--    <string name="instructions_text3">It opens up a new screen where you enter detailed information like-->
+<!--        \n\nName\nCompany\nSize\nDescription\n\n Click Cancel/Save </string>-->
+<!--    <string name="instructions_text4">Click on three dots on the toolbar to Logout</string>-->
+
+    <string name="shoe_logo">Shoe Logo</string>
+</resources>
