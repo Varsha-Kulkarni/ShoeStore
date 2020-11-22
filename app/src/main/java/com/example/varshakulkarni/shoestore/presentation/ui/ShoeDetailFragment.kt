@@ -8,13 +8,11 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.varshakulkarni.shoestore.R
 import com.example.varshakulkarni.shoestore.databinding.FragmentShoedetailBinding
 import com.example.varshakulkarni.shoestore.extensions.validateDouble
 import com.example.varshakulkarni.shoestore.extensions.validateString
-//import com.example.varshakulkarni.shoestore.extensions.validate
 import com.example.varshakulkarni.shoestore.presentation.viewmodels.ShoeListViewModel
 
 
