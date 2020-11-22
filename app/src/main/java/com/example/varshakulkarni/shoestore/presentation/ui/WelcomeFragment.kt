@@ -19,7 +19,6 @@ import com.example.varshakulkarni.shoestore.databinding.FragmentWelcomeBinding
 class WelcomeFragment: Fragment(R.layout.fragment_welcome){
 
     private lateinit var fragmentViewBinding: FragmentWelcomeBinding
-    private lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,10 +29,8 @@ class WelcomeFragment: Fragment(R.layout.fragment_welcome){
         fragmentViewBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_welcome, container, false)
 
-        navController = findNavController()
-
         fragmentViewBinding.btNext.setOnClickListener {
-            navController.navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())
+            findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())
 
         }
         return fragmentViewBinding.root

@@ -18,7 +18,6 @@ import com.example.varshakulkarni.shoestore.databinding.FragmentInstructionsBind
 class InstructionsFragment : Fragment(R.layout.fragment_instructions) {
 
     private lateinit var fragmentViewBinding: FragmentInstructionsBinding
-    private lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,10 +28,8 @@ class InstructionsFragment : Fragment(R.layout.fragment_instructions) {
         fragmentViewBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_instructions, container, false)
 
-        navController = findNavController()
-
         fragmentViewBinding.btNext.setOnClickListener {
-            navController.navigate(InstructionsFragmentDirections.actionInstructionsFragmentToShoelistFragment())
+            findNavController().navigate(InstructionsFragmentDirections.actionInstructionsFragmentToShoelistFragment())
         }
         return fragmentViewBinding.root
     }

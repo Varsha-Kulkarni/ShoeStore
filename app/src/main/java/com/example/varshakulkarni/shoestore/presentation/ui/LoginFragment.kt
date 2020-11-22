@@ -14,16 +14,12 @@ import com.example.varshakulkarni.shoestore.R
 import com.example.varshakulkarni.shoestore.databinding.FragmentLoginBinding
 import com.example.varshakulkarni.shoestore.extensions.validateString
 
-//import com.example.varshakulkarni.shoestore.extensions.validate
-
-
 /**
  * Created By Varsha Kulkarni on 18/11/20
  */
 class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private lateinit var fragmentViewBinding: FragmentLoginBinding
-    private lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,17 +36,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         return fragmentViewBinding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        navController = findNavController()
-
-        // If the user presses the back button, bring them back to the home screen.
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
-            navController.popBackStack(R.id.nav_welcome, false)
-        }
-    }
-
     private fun setupUI() {
 
         //Reset error when text entered
@@ -64,14 +49,14 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         fragmentViewBinding.btLogin.setOnClickListener {
             //check for text fields empty error
             if (validateInputs()) {
-                navController.navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
             }
         }
 
         fragmentViewBinding.btRegister.setOnClickListener {
             //check for text fields empty error
             if (validateInputs()) {
-                navController.navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
             }
         }
     }
