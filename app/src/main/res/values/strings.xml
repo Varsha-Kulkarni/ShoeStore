@@ -8,6 +8,7 @@
     <string name="signup">SIGN UP</string>
     <string name="email_error_string">Email field cannot be empty</string>
     <string name="password_error_string">Password field cannot be empty</string>
+    <string name="error_string"> Field cannot be empty</string>
 
     <string name="welcome">WELCOME</string>
     <string name="welcome_text1">Welcome to Shoe Store</string>
@@ -15,11 +16,22 @@
     <string name="next">NEXT</string>
 
     <string name="instructions">INSTRUCTIONS</string>
-    <string name="instructions_text1">Click on \'+\' to add the information about a pair of shoes in the store.\nIt opens up a new screen where you enter detailed information like:\nName\nCompany\nSize\nDescription\nClick Cancel/Save \n\n Click on three dots on the toolbar to Logout</string>
-<!--    <string name="instructions_text2">to add the information about a pair of shoes in the store.</string>-->
-<!--    <string name="instructions_text3">It opens up a new screen where you enter detailed information like-->
-<!--        \n\nName\nCompany\nSize\nDescription\n\n Click Cancel/Save </string>-->
-<!--    <string name="instructions_text4">Click on three dots on the toolbar to Logout</string>-->
+    <string name="instructions_text1">Manage Shoe Store</string>
+    <string name="instructions_text2">Click on \'+\' to add the details about a pair of shoes in the store.\nIt opens up a new screen where you enter detailed information like:\nName\nSize\nBrand Name\nDescription\n\nClick Cancel/Save. \n\nClick on three dots on the toolbar to Logout.</string>
 
     <string name="shoe_logo">Shoe Logo</string>
+    <string name="add_shoe">Add Shoes</string>
+    <string name="empty_list_message">Click on \'+\' to \nadd Shoe details here</string>
+    <string name="add_item">Add Shoes</string>
+
+    <string name="name">Name</string>
+    <string name="brand">Brand</string>
+    <string name="description">Description</string>
+    <string name="type">Type</string>
+    <string name="size">Size</string>
+    <string name="price">Price</string>
+    <string name="save">SAVE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="logout">Logout</string>
+    <string name="size_error_string">Size cannot be zero</string>
 </resources>

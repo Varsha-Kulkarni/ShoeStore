@@ -35,6 +35,41 @@
     <fragment android:id="@+id/nav_instructions"
         android:label="@string/instructions"
         android:name="com.example.varshakulkarni.shoestore.presentation.ui.InstructionsFragment"
-        tools:layout="@layout/fragment_welcome"/>
+        tools:layout="@layout/fragment_welcome">
+
+        <action
+            android:id="@+id/action_instructionsFragment_to_shoelistFragment"
+            app:destination="@+id/nav_shoelist"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+
+    <fragment android:id="@+id/nav_shoelist"
+        android:label="SHOE LIST"
+        android:name="com.example.varshakulkarni.shoestore.presentation.ui.ShoeListFragment"
+        tools:layout="@layout/fragment_shoelist">
+
+        <action android:id="@+id/action_shoelistFragment_to_shoedetailFragment"
+            app:destination="@+id/nav_shoedetail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action android:id="@+id/action_shoelistFragment_to_loginFragment"
+            app:destination="@+id/nav_login"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <fragment android:id="@+id/nav_shoedetail"
+        android:label="SHOE DETAIL"
+        android:name="com.example.varshakulkarni.shoestore.presentation.ui.ShoeDetailFragment"
+        tools:layout="@layout/fragment_shoedetail"/>
 
 </navigation>

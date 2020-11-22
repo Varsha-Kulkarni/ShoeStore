@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.example.varshakulkarni.shoestore.databinding.ActivityMainBinding
+import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
     private val navController by lazy { findNavController(R.id.nav_host_fragment) }
@@ -14,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         AppBarConfiguration(
             setOf(
                 R.id.nav_login
-
             )
         )
     }
@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        Timber.plant(Timber.DebugTree())
 
         setSupportActionBar(activityMainBinding.toolbar)
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)

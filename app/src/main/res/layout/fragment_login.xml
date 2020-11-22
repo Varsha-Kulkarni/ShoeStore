@@ -9,7 +9,7 @@
         android:fillViewport="true"
         >
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -24,14 +24,17 @@
                 android:src="@drawable/ic_shoe"
                 android:layout_margin="16dp"
                 android:padding="8dp"
-                android:contentDescription="@string/shoe_logo"/>
+                android:contentDescription="@string/shoe_logo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tlEmail"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tlEmail"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:endIconMode="clear_text"
                 app:errorEnabled="true"
                 android:hint="@string/email"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -40,14 +43,14 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.2"
                 app:startIconContentDescription="@string/email"
-                app:startIconDrawable="@drawable/ic_outline_person_24">
+                app:startIconDrawable="@drawable/ic_person">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etEmail"
                     style="@style/EditTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
 
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -64,7 +67,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tlEmail"
                 app:startIconContentDescription="@string/password"
-                app:startIconDrawable="@drawable/ic_outline_lock_24">
+                app:startIconDrawable="@drawable/ic_lock">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPassword"
@@ -88,13 +91,13 @@
                 android:id="@+id/tvNewUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:text="@string/newUser"
                 app:layout_constraintBottom_toTopOf="@+id/btRegister"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btLogin"
-                app:layout_constraintVertical_bias="1" />
+                app:layout_constraintVertical_bias="0.8"
+               />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btRegister"
@@ -107,7 +110,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/btLogin"
                 />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 </layout>

@@ -32,7 +32,7 @@ class InstructionsFragment : Fragment(R.layout.fragment_instructions) {
         navController = findNavController()
 
         fragmentViewBinding.btNext.setOnClickListener {
-
+            navController.navigate(InstructionsFragmentDirections.actionInstructionsFragmentToShoelistFragment())
         }
         return fragmentViewBinding.root
     }
