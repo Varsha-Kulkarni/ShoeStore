@@ -2,6 +2,7 @@ package com.example.varshakulkarni.shoestore.presentation.ui
 
 import android.os.Bundle
 import android.view.*
+import androidx.activity.addCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -23,9 +24,9 @@ class ShoeListFragment : Fragment() {
     lateinit var fragmentViewBinding: FragmentShoelistBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         fragmentViewBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoelist, container, false)
 
@@ -48,11 +49,16 @@ class ShoeListFragment : Fragment() {
             if (shoeList.isNotEmpty()) fragmentViewBinding.emptyListText.visibility = View.GONE
             shoeList.forEach { shoe ->
                 val itemBinding: ItemShoelistBinding =
-                    DataBindingUtil.inflate(inflater, R.layout.item_shoelist, container, false)
+                        DataBindingUtil.inflate(inflater, R.layout.item_shoelist, container, false)
                 itemBinding.shoe = shoe
                 fragmentViewBinding.shoeList.addView(itemBinding.root)
             }
         })
+
+        // If the user presses the back button, onboarding screens won't be loaded
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            findNavController().popBackStack(R.id.nav_login, false)
+        }
 
         setHasOptionsMenu(true)
 

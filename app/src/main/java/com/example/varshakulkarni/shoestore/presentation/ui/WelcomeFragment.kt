@@ -20,13 +20,13 @@ class WelcomeFragment: Fragment(R.layout.fragment_welcome){
     private lateinit var fragmentViewBinding: FragmentWelcomeBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
 
         fragmentViewBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_welcome, container, false)
+                inflater, R.layout.fragment_welcome, container, false)
 
         fragmentViewBinding.btNext.setOnClickListener {
             findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())

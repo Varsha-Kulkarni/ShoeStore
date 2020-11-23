@@ -20,13 +20,13 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     private lateinit var fragmentViewBinding: FragmentLoginBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
 
         fragmentViewBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_login, container, false
+                inflater, R.layout.fragment_login, container, false
         )
 
         setupUI()
@@ -60,7 +60,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     }
 
     private fun validateInputs() =
-        fragmentViewBinding.tlEmail.validateString() && fragmentViewBinding.tlPassword.validateString()
+            fragmentViewBinding.tlEmail.validateString() && fragmentViewBinding.tlPassword.validateString()
 }
 
 

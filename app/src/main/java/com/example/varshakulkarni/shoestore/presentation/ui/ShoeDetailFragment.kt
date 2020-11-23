@@ -26,9 +26,9 @@ class ShoeDetailFragment : Fragment(){
     lateinit var fragmentViewBinding: FragmentShoedetailBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
 
         fragmentViewBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoedetail, container, false)
@@ -42,17 +42,20 @@ class ShoeDetailFragment : Fragment(){
 
         fragmentViewBinding.viewModel = shoeViewModel
 
+        //add shoe detail when all the fields are filled
         fragmentViewBinding.btSave.setOnClickListener {
             if ( validateInputs() )
                 shoeViewModel.addShoe()
         }
 
+        //When Save/Cancel clicked, go back to ShoeList screen to view the new shoe detail added
         shoeViewModel.shoeInsertionDone.observe(viewLifecycleOwner, {
             if (it) {
                 findNavController().navigateUp()
             }
         })
 
+        //When the user starts entering text into the fields, reset the error to null
         fragmentViewBinding.etName.doAfterTextChanged {
             fragmentViewBinding.tlName.error = null
         }
@@ -65,8 +68,8 @@ class ShoeDetailFragment : Fragment(){
     }
 
     private fun validateInputs() =
-        fragmentViewBinding.tlName.validateString() && fragmentViewBinding.tlBrand.validateString() &&
-                fragmentViewBinding.tlDescription.validateString() && fragmentViewBinding.tlSize.validateDouble()
+            fragmentViewBinding.tlName.validateString() && fragmentViewBinding.tlBrand.validateString() &&
+                    fragmentViewBinding.tlDescription.validateString() && fragmentViewBinding.tlSize.validateDouble()
 
 
     override fun onDestroyView() {

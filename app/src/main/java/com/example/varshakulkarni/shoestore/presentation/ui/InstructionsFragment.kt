@@ -19,13 +19,13 @@ class InstructionsFragment : Fragment(R.layout.fragment_instructions) {
     private lateinit var fragmentViewBinding: FragmentInstructionsBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
 
         fragmentViewBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_instructions, container, false)
+                inflater, R.layout.fragment_instructions, container, false)
 
         fragmentViewBinding.btNext.setOnClickListener {
             findNavController().navigate(InstructionsFragmentDirections.actionInstructionsFragmentToShoelistFragment())

@@ -13,9 +13,11 @@ class MainActivity : AppCompatActivity() {
     private val navController by lazy { findNavController(R.id.nav_host_fragment) }
     private val appBarConfiguration by lazy {
         AppBarConfiguration(
-            setOf(
-                R.id.nav_login
-            )
+                setOf(
+                        R.id.nav_login,
+                        R.id.nav_welcome,
+                        R.id.nav_shoelist
+                )
         )
     }
 
