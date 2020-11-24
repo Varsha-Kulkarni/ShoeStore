@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         AppBarConfiguration(
                 setOf(
                         R.id.nav_login,
-                        R.id.nav_welcome,
                         R.id.nav_shoelist
                 )
         )

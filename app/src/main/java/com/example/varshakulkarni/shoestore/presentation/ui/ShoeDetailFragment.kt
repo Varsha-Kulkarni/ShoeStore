@@ -65,12 +65,31 @@ class ShoeDetailFragment : Fragment(){
         fragmentViewBinding.etSize.doAfterTextChanged {
             fragmentViewBinding.tlSize.error = null
         }
+        fragmentViewBinding.etBrand.doAfterTextChanged {
+            fragmentViewBinding.tlDescription.error = null
+        }
     }
 
-    private fun validateInputs() =
-            fragmentViewBinding.tlName.validateString() && fragmentViewBinding.tlBrand.validateString() &&
-                    fragmentViewBinding.tlDescription.validateString() && fragmentViewBinding.tlSize.validateDouble()
+    private fun validateInputs() : Boolean {
+        var validInputs = true
 
+        if (!(fragmentViewBinding.tlName.validateString())) {
+            validInputs = false
+        }
+        if (!(fragmentViewBinding.tlBrand.validateString())) {
+            validInputs = false
+        }
+
+        if (!(fragmentViewBinding.tlSize.validateDouble())) {
+            validInputs = false
+        }
+
+        if (!(fragmentViewBinding.tlDescription.validateString())) {
+            validInputs = false
+        }
+
+        return validInputs
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

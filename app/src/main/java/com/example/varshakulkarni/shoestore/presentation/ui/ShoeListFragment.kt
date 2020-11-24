@@ -2,7 +2,6 @@ package com.example.varshakulkarni.shoestore.presentation.ui
 
 import android.os.Bundle
 import android.view.*
-import androidx.activity.addCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -54,11 +53,6 @@ class ShoeListFragment : Fragment() {
                 fragmentViewBinding.shoeList.addView(itemBinding.root)
             }
         })
-
-        // If the user presses the back button, onboarding screens won't be loaded
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
-            findNavController().popBackStack(R.id.nav_login, false)
-        }
 
         setHasOptionsMenu(true)
 

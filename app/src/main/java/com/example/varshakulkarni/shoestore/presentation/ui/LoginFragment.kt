@@ -59,8 +59,19 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         }
     }
 
-    private fun validateInputs() =
-            fragmentViewBinding.tlEmail.validateString() && fragmentViewBinding.tlPassword.validateString()
+    private fun validateInputs() : Boolean {
+        var validInputs = true
+
+        if (!(fragmentViewBinding.tlEmail.validateString())) {
+            validInputs = false
+        }
+        if (!(fragmentViewBinding.tlPassword.validateString())) {
+            validInputs = false
+        }
+
+        return validInputs
+    }
+
 }
 
 

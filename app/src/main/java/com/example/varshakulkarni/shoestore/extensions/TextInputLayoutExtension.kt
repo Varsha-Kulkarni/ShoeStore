@@ -25,13 +25,14 @@ fun TextInputLayout.validateString() : Boolean {
 
 fun TextInputLayout.validateDouble() : Boolean {
     var noErrors = true
-    val value = this.editText?.text.toString().toDouble()
-    if (value == 0.0) {
-        this.error = resources.getString(R.string.size_error_string)
-        noErrors = false
-    } else {
-        this.error = null
+    if (this.validateString()) {
+        if (this.editText?.text.toString().toDouble() == 0.0) {
+            this.error = resources.getString(R.string.size_error_string)
+            noErrors = false
+        } else {
+            this.error = null
 
+        }
     }
 
     return noErrors

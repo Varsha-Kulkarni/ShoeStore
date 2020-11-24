@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/size"
                     android:inputType="numberDecimal"
-                    android:text="@={`` + viewModel.shoe.size}" />
+                    android:text="@={viewModel.shoeSizeObservable.newSize}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!--            <ImageView-->
