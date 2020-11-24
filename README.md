@@ -21,8 +21,8 @@ A Cancel button with an action to navigate back to the shoe list screen
 A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model using 
 <com.google.android.material.button.MaterialButton>
 
-The shoe listing page will show the list of shoes and show a button for adding a new shoe, while the detail page will be for adding a shoe entry. 
-All entries will be saved only as long as the app is running.
+The shoe listing page shows the list of shoes and show a button for adding a new shoe, while the detail page is for adding a shoe entry. 
+All entries are saved only as long as the app is running.
 
 ## Rubric Followed
 The Detail screen to add the new item to the view model. The listing screen is listening to the model and show the new item.
