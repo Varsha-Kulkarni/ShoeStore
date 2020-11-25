@@ -8,6 +8,7 @@
     tools:context="com.example.varshakulkarni.shoestore.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <!--This layout is created to place all the content below the AppBar without overlapping while scrolling.-->
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"

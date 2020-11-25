@@ -14,6 +14,14 @@
         android:fitsSystemWindows="true"
         android:fillViewport="true">
 
+        <!--To place Cancel and Save buttons next to each other, there is need of nesting another
+       LinearLayout or use RelativeLayout (not recommended anymore).
+       Using ConstraintLayout gives flat hierarchy which in turn creates a fast and
+       responsive user interface for the app.
+       Google Developer Doc also recommends to use ConstraintLayout when designing app's
+       layouts for optimal performance and ease of use.
+       Source: https://android-developers.googleblog.com/2017/08/understanding-performance-benefits-of.html?m=1 -->
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

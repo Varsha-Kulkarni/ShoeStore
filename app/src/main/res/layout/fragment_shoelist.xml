@@ -8,6 +8,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
+            <!-- The requirement here is to use, basic layout which holds views
+            one below the other which are added dynamically, LinearLayout works efficiently-->
             <LinearLayout
                 android:id="@+id/shoe_list"
                 android:layout_width="match_parent"
